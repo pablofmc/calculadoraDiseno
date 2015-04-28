@@ -44,7 +44,7 @@ public class Caracter {
         
         this.myController.addOperatorType(input);
       
-        Runtime.getRuntime().exec("cls");
+        System.out.print("\f");
         
         do {
             System.out.println(
@@ -56,15 +56,15 @@ public class Caracter {
             
             if (input.equals("1")) {
                 System.out.println(
-                "Por favor eliga una de las sgts opciones \n"
+                "Por favor ingrese un numero \n"
                 );
                 input = br.readLine();
                 this.myController.addNumber(input);
+                input = "1";
             }
             System.out.println(input);
         } while(!input.equals("2"));
        
-        Runtime.getRuntime().exec("cls");
         System.out.println(this.myController.calculateResult());
         
     }

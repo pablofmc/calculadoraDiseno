@@ -18,6 +18,7 @@ public class ToHexadecimal extends Calculator{
     public ToHexadecimal() {
     }
     
+    @Override
     public String calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
         this.listNumbers = listNumbers;
