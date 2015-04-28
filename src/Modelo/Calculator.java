@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 
  */
-public class Calculator implements ICalculate {
+public abstract class Calculator implements ICalculate {
     ArrayList<Integer> listNumbers;
     String result;
     /**
