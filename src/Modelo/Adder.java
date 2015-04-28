@@ -7,13 +7,13 @@ import java.util.*;
  */
 public class Adder extends Calculator {
 
-    int resultado;
+    String resultado;
     ArrayList<Integer> numeros;
     /**
      * 
      */
     public Adder() {
-       this.resultado = 0;
+       this.resultado = "";
     }
     
     @Override
