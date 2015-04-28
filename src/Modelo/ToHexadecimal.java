@@ -18,7 +18,8 @@ public class ToHexadecimal extends Calculator{
     public ToHexadecimal() {
     }
     
-    public String calculate(ArrayList listNumbers) {
+    public String calculate(DTO myDTO) {
+        this.listNumbers = myDTO.getListNumbers();
         this.listNumbers = listNumbers;
         this.result = Integer.toHexString(this.listNumbers.get(0));
         return this.result;

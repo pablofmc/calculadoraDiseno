@@ -19,7 +19,8 @@ public class ToOctal extends Calculator{
     public ToOctal() {
     }
     
-    public String calculate(ArrayList listNumbers) {
+    public String calculate(DTO myDTO) {
+        this.listNumbers = myDTO.getListNumbers();
         this.listNumbers = listNumbers;
         this.result = Integer.toBinaryString(this.listNumbers.get(0));
         return this.result;
