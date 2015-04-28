@@ -7,5 +7,11 @@ import java.util.*;
  * 
  */
 public interface ITController {
-    MathematicsFactory myFactory = new MathematicsFactory();
+    
+    void setFactory(MathematicsFactory myFactory);
+    MathematicsFactory getFactory();
+    void addOperatorType(String operatorType);
+    void addNumber( String number);
+    String calculateResult();
+    
 }

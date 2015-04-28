@@ -7,6 +7,6 @@ import java.util.*;
  */
 public interface ICalculate {
 
-    String calculate();
+    String calculate(DTO myDTO);
 
 }
