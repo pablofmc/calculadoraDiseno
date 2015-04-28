@@ -14,7 +14,8 @@ public class MathematicsFactory {
     }
     
     public Calculator createInstance(int operatorType) {
-        switch (operatorType) {
+        this.operatorType = operatorType;
+        switch (this.operatorType) {
             case 1:
                 this.operation = new Adder();
             case 2:
@@ -28,8 +29,11 @@ public class MathematicsFactory {
             case 6:
                 this.operation = new SquareRooter();
             case 7:
-                this.operation = new 
-                
+                this.operation = new ToBinary();
+            case 8:
+                this.operation = new ToOctal();
+            case 9:
+                this.operation = new ToHexadecimal();                
         }
         return this.operation;
     }

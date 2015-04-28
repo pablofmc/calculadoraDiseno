@@ -9,7 +9,7 @@ package Modelo;
  *
  * @author diego
  */
-public class ToOctal {
+public class ToOctal extends Calculator{
     
     /**
      * 
