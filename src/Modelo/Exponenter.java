@@ -17,7 +17,7 @@ public class Exponenter extends Calculator {
     
     public String calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
-        partialResult = Math.pow(listNumbers.indexOf(0), listNumbers.indexOf(1));
+        partialResult = Math.pow(listNumbers.get(0), listNumbers.get(1));
         result = Double.toString(partialResult);
         return result;
     }

@@ -30,7 +30,7 @@ public class DTO {
         }
     }
     
-    public ArrayList getListNumbers() {
+    public ArrayList<Integer> getListNumbers() {
         return this.listNumbers;
     }
     
