@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author diego
@@ -15,4 +17,10 @@ public class ToHexadecimal extends Calculator{
      */
     public ToHexadecimal() {
     }
+    
+    public String calculate(ArrayList listNumbers) {
+        this.listNumbers = listNumbers;
+        this.result = Integer.toHexString(this.listNumbers.get(0));
+        return this.result;
+    } 
 }

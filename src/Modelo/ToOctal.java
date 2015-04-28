@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author diego
@@ -16,4 +18,10 @@ public class ToOctal extends Calculator{
      */
     public ToOctal() {
     }
+    
+    public String calculate(ArrayList listNumbers) {
+        this.listNumbers = listNumbers;
+        this.result = Integer.toBinaryString(this.listNumbers.get(0));
+        return this.result;
+    } 
 }

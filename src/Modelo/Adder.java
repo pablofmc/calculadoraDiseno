@@ -8,9 +8,7 @@ import java.util.*;
 public class Adder extends Calculator {
 
     int partialResult;
-    /**
-     * 
-     */
+
     public Adder() {
        this.partialResult = 0;
     }
@@ -20,6 +18,7 @@ public class Adder extends Calculator {
         for(int i = 0;i <= listNumbers.size();i++) {
             partialResult += listNumbers.indexOf(i);
         }
+        result = Integer.toString(partialResult);
         return result;
     }
     
