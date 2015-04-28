@@ -7,25 +7,24 @@ import java.util.*;
  */
 public class Adder extends Calculator {
 
-    int resultado;
-    ArrayList<Integer> numeros;
+    int partialResult;
     /**
      * 
      */
     public Adder() {
-       this.resultado = 0;
+       this.partialResult = 0;
     }
     
     @Override
-    public int calculate() {
-        for(int i = 0;i <= numeros.size();i++) {
-            resultado += numeros.indexOf(i);
+    public String calculate() {
+        for(int i = 0;i <= listNumbers.size();i++) {
+            partialResult += listNumbers.indexOf(i);
         }
-        return resultado;
+        return result;
     }
     
-    public void getList(ArrayList<Integer> listaNumeros) {
-        this.numeros = listaNumeros;
+    public void getList(ArrayList<Integer> listNumbers) {
+        this.listNumbers = listNumbers;
     }
 
 }

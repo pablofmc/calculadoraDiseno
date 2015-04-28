@@ -15,7 +15,7 @@ public abstract class Calculator implements ICalculate {
     }
 
     @Override
-    public int calculate() {
+    public String calculate() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
