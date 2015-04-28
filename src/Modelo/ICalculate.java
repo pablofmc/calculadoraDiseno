@@ -7,6 +7,6 @@ import java.util.*;
  */
 public interface ICalculate {
 
-    int calculate();
+    String calculate();
 
 }

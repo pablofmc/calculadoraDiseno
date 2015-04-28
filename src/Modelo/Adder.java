@@ -17,7 +17,7 @@ public class Adder extends Calculator {
     }
     
     @Override
-    public int calculate() {
+    public String calculate() {
         for(int i = 0;i <= numeros.size();i++) {
             resultado += numeros.indexOf(i);
         }
