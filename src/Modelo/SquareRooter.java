@@ -15,7 +15,7 @@ public class SquareRooter extends Calculator {
         partialResult = 0;
     }
     
-   public String Calculate(DTO myDTO) {
+   public String calculate(DTO myDTO) {
        this.listNumbers = myDTO.getListNumbers();
        partialResult = Math.sqrt(listNumbers.indexOf(0));
        result = Double.toString(partialResult);
