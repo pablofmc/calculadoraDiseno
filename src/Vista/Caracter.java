@@ -15,36 +15,58 @@ import java.util.logging.Logger;
 public class Caracter {
     ITController myController;
     BufferedReader br;
-    String sTexto;
+    String input;
     
     /**
      * 
      */
-    public Caracter() {
+    public Caracter() throws IOException {
         this.myController = new TController();
+        br = new BufferedReader(new InputStreamReader(System.in));
         showMenu();
     }
     
-    private void showMenu() {
+    private void showMenu() throws IOException {
         
         System.out.println(
-        "Por favor elija una de las sgts acciones \n" +
+        "Por favor elija una de las sgts opciones \n" +
         "1. Sumar \n" +
         "2. Restar \n" + 
         "3. Multiplicar \n" +
-        "4. Dividir \n" +
+        "4. Dividir \n"
         );
+        
+        try {
+            input = br.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(Caracter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        this.myController.addOperatorType(input);
+      
+        Runtime.getRuntime().exec("cls");
+        
         do {
-            br = new BufferedReader(new InputStreamReader(System.in));
-            try {
-                sTexto = br.readLine();
-            } catch (IOException ex) {
-                Logger.getLogger(TController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            System.out.println(sTexto);
-            this.myController.addNumber();
+            System.out.println(
+            "Por favor eliga una de las sgts opciones \n" +
+            "1. Agregar" +
+            "2. Aceptar"
+            );
+            input = br.readLine();
             
-        } while(!sTexto.equals("5"));
+            if (input.equals("1")) {
+                System.out.println(
+                "Por favor eliga una de las sgts opciones \n"
+                );
+                input = br.readLine();
+                this.myController.addNumber(input);
+            }
+            System.out.println(input);
+        } while(!input.equals("2"));
+       
+        Runtime.getRuntime().exec("cls");
+        System.out.println(this.myController.calculateResult());
+        
     }
 
 }

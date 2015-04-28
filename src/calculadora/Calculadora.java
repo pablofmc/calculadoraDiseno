@@ -7,6 +7,7 @@
 package calculadora;
 
 import Vista.Caracter;
+import java.io.IOException;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Calculadora {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new Caracter();
     }
     
