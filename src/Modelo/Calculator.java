@@ -12,5 +12,8 @@ public class Calculator implements ICalculate {
      */
     public Calculator() {
     }
-
+    
+    public void hoa(){
+        
+    }
 }
