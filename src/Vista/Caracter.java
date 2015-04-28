@@ -62,7 +62,6 @@ public class Caracter {
                 this.myController.addNumber(input);
                 input = "1";
             }
-            System.out.println(input);
         } while(!input.equals("2"));
        
         System.out.println(this.myController.calculateResult());
