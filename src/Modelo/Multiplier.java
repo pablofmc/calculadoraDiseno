@@ -15,6 +15,7 @@ public class Multiplier extends Calculator {
         this.partialResult = 0;
     }
     
+    @Override
     public DTO calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
         myDTO.getListNumbers().clear();
