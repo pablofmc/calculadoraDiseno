@@ -7,6 +7,7 @@
 package calculadora;
 
 import Vista.Caracter;
+import Vista.Window;
 import java.io.IOException;
 
 /**
@@ -21,6 +22,8 @@ public class Calculadora {
      */
     public static void main(String[] args) throws IOException {
         new Caracter();
+        //new Window().setVisible(true);
+        
     }
     
 }
