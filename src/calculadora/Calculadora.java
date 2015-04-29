@@ -7,7 +7,6 @@
 package calculadora;
 
 import Vista.Caracter;
-import Vista.Window;
 import java.io.IOException;
 
 /**

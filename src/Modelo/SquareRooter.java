@@ -17,12 +17,12 @@ public class SquareRooter extends Calculator {
     
     @Override
    public DTO calculate(DTO myDTO) {
-       this.listNumbers = myDTO.getListNumbers();
+       this.listNumbers = (ArrayList<Integer>)myDTO.getListNumbers().clone();
        myDTO.getListNumbers().clear();
-       System.out.println("siii");
+       System.out.println("PABLO  " + this.listNumbers.size() );
        for (int i = 0; i < this.listNumbers.size(); i++){
            System.out.println("siii");
-           myDTO.addNumber(Double.toString(Math.sqrt(listNumbers.get(0))));
+           myDTO.addNumber(Double.toString(Math.sqrt(listNumbers.get(i))));
        }
        return myDTO;
    }
