@@ -3,12 +3,6 @@ package Controlador;
 import Modelo.DTO;
 import Modelo.ICalculate;
 import Modelo.MathematicsFactory;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * 
@@ -46,15 +40,23 @@ public class TController implements ITController {
     @Override
     public String calculateResult() {
         this.operation = this.myFactory.createInstance(this.operatorType);
-        System.out.println("resultado  ");
-        return this.operation.calculate(this.myDTO);
+        return asString(this.operation.calculate(this.myDTO));
     }
 
     @Override
     public void addOperatorType(String operatorType) {
         this.operatorType = Integer.parseInt(operatorType);
     }
-      
-    
-    
+
+    @Override
+    public String asString(DTO aDTO) {
+        this.myDTO = aDTO;
+        String result="";
+        int size = this.myDTO.getListNumbers().size();
+        for (int i = 0; i < size - 1; i++) {
+            result += this.myDTO.getListNumbers().get(i).toString() + "| ";
+        }
+        result += this.myDTO.getListNumbers().get(size - 1).toString();
+        return result;
+    }   
 }

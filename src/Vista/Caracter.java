@@ -64,7 +64,6 @@ public class Caracter {
                 "Por favor ingrese un numero \n"
                 );
                 input = br.readLine();
-                System.out.println("jhgkjhb");
                 this.myController.addNumber(input);
                 input = "1";
             }

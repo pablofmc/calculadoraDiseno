@@ -14,13 +14,15 @@ public class Adder extends Calculator {
     }
     
     @Override
-    public String calculate(DTO myDTO) {
+    public DTO calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
-        for(int i = 0;i < listNumbers.size();i++) {
-            partialResult += this.listNumbers.get(i);
+        myDTO.getListNumbers().clear();
+        for (Integer number : listNumbers) {
+            partialResult += number;
         }
-        result = Integer.toString(partialResult);
-        return result;
+        
+        myDTO.addNumber(Integer.toString(partialResult));
+        return myDTO;
     }
 
 }

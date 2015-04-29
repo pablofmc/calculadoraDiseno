@@ -14,10 +14,13 @@ public class ToBinary extends Calculator {
         
     }
     
-    public String calculate(DTO myDTO) {
+    @Override
+    public DTO calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
-        this.listNumbers = listNumbers;
-        this.result = Integer.toBinaryString(this.listNumbers.get(0));
-        return this.result;
+        myDTO.getListNumbers().clear();
+        for (Integer number : this.listNumbers) {
+            myDTO.addNumber(Integer.toBinaryString(number));
+        }
+        return myDTO;
     } 
 }

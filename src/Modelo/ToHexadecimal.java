@@ -19,10 +19,12 @@ public class ToHexadecimal extends Calculator{
     }
     
     @Override
-    public String calculate(DTO myDTO) {
+    public DTO calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
-        this.listNumbers = listNumbers;
-        this.result = Integer.toHexString(this.listNumbers.get(0));
-        return this.result;
+        myDTO.getListNumbers().clear();
+        for (Integer number : this.listNumbers) {
+            myDTO.addNumber(Integer.toHexString(number));
+        }
+        return myDTO;
     } 
 }

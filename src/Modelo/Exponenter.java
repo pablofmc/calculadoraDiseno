@@ -15,11 +15,16 @@ public class Exponenter extends Calculator {
         partialResult = 0;
     }
     
-    public String calculate(DTO myDTO) {
+    @Override
+    public DTO calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
-        partialResult = Math.pow(listNumbers.get(0), listNumbers.get(1));
-        result = Double.toString(partialResult);
-        return result;
+        myDTO.getListNumbers().clear();
+        int e;
+        for (int i = 0; i < this.listNumbers.size()-1; i++){
+            e = i+1;
+            myDTO.addNumber(Double.toString(Math.pow(listNumbers.get(i), listNumbers.get(e))));
+        }
+        return myDTO;
     }
 
 

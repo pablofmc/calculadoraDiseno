@@ -15,13 +15,15 @@ public class Divider extends Calculator {
         this.partialResult = 0;
     }
     
-    public String calculate(DTO myDTO) {
+    @Override
+    public DTO calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
+        myDTO.getListNumbers().clear();
         partialResult = listNumbers.get(0);
         for(int i = 1;i < listNumbers.size();i++) {
             partialResult = partialResult/listNumbers.get(i);
         }
-        result = Integer.toString(partialResult);
-        return result;
+        myDTO.addNumber(Integer.toString(partialResult));
+        return myDTO;
     }
 }

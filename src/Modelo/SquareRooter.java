@@ -15,11 +15,16 @@ public class SquareRooter extends Calculator {
         partialResult = 0;
     }
     
-   public String calculate(DTO myDTO) {
+    @Override
+   public DTO calculate(DTO myDTO) {
        this.listNumbers = myDTO.getListNumbers();
-       partialResult = Math.sqrt(listNumbers.get(0));
-       result = Double.toString(partialResult);
-       return result;
+       myDTO.getListNumbers().clear();
+       System.out.println("siii");
+       for (int i = 0; i < this.listNumbers.size(); i++){
+           System.out.println("siii");
+           myDTO.addNumber(Double.toString(Math.sqrt(listNumbers.get(0))));
+       }
+       return myDTO;
    }
 
 }

@@ -7,7 +7,7 @@ import java.util.*;
  */
 public abstract class Calculator implements ICalculate {
     ArrayList<Integer> listNumbers;
-    String result;
+    DTO result;
     /**
      * 
      */
@@ -16,7 +16,7 @@ public abstract class Calculator implements ICalculate {
     }
 
     @Override
-    public String calculate(DTO myDTO) {
+    public DTO calculate(DTO myDTO) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
