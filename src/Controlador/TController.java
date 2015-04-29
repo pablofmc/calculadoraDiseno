@@ -56,7 +56,6 @@ public class TController implements ITController {
         for (int i = 0; i < size - 1; i++) {
             result += this.myDTO.getListNumbers().get(i).toString() + "| ";
         }
-        System.out.println("hola holaa" + this.myDTO.getListNumbers().get(size - 1).toString());
         result += this.myDTO.getListNumbers().get(size - 1).toString();
         return result;
     }   

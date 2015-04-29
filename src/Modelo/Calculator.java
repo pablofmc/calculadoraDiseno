@@ -6,7 +6,7 @@ import java.util.*;
  * 
  */
 public abstract class Calculator implements ICalculate {
-    ArrayList<Integer> listNumbers;
+    ArrayList<String> listNumbers;
     DTO result;
     /**
      * 

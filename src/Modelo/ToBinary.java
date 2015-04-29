@@ -15,11 +15,11 @@ public class ToBinary extends Calculator {
     }
     
     @Override
-    public DTO calculate(DTO myDTO) {
-        this.listNumbers = (ArrayList<Integer>)myDTO.getListNumbers().clone();
+    public DTO calculate(DTO myDTO) {    
+        this.listNumbers = (ArrayList<String>)myDTO.getListNumbers().clone();
         myDTO.getListNumbers().clear();
-        for (Integer number : this.listNumbers) {
-            myDTO.addNumber(Integer.toBinaryString(number));
+        for (String number : this.listNumbers) {
+            myDTO.addNumber(Integer.toBinaryString(Integer.parseInt(number)));
         }
         return myDTO;
     } 
