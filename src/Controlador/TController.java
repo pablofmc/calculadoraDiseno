@@ -46,8 +46,6 @@ public class TController implements ITController {
     @Override
     public String calculateResult() {
         this.operation = this.myFactory.createInstance(this.operatorType);
-        
-        System.out.println(this.myDTO.isNull());
         return this.operation.calculate(this.myDTO);
     }
 
