@@ -17,7 +17,7 @@ public class Divider extends Calculator {
     
     @Override
     public DTO calculate(DTO myDTO) {
-        this.listNumbers = myDTO.getListNumbers();
+        this.listNumbers = (ArrayList<Integer>)myDTO.getListNumbers().clone();
         myDTO.getListNumbers().clear();
         partialResult = listNumbers.get(0);
         for(int i = 1;i < listNumbers.size();i++) {

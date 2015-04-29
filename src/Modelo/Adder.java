@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  * 
  */
@@ -13,7 +15,7 @@ public class Adder extends Calculator {
     
     @Override
     public DTO calculate(DTO myDTO) {
-        this.listNumbers = myDTO.getListNumbers();
+        this.listNumbers = (ArrayList<Integer>)myDTO.getListNumbers().clone();
         myDTO.getListNumbers().clear();
         for (Integer number : listNumbers) {
             partialResult += number;

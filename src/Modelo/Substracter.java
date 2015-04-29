@@ -16,7 +16,7 @@ public class Substracter extends Calculator {
     }
     
     public DTO calculate(DTO myDTO) {
-        this.listNumbers = myDTO.getListNumbers();
+        this.listNumbers = (ArrayList<Integer>)myDTO.getListNumbers().clone();
         myDTO.getListNumbers().clear();
         partialResult = this.listNumbers.get(0);
         for(int i = 1;i < listNumbers.size();i++) {

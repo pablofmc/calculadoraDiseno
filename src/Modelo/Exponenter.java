@@ -17,7 +17,7 @@ public class Exponenter extends Calculator {
     
     @Override
     public DTO calculate(DTO myDTO) {
-        this.listNumbers = myDTO.getListNumbers();
+        this.listNumbers = (ArrayList<Integer>)myDTO.getListNumbers().clone();
         myDTO.getListNumbers().clear();
         int e;
         for (int i = 0; i < this.listNumbers.size()-1; i++){

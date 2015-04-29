@@ -7,7 +7,7 @@ import java.util.*;
  * 
  */
 public class DTO {
-    private ArrayList<Integer> listNumbers;
+    private ArrayList<String> listNumbers;
     private int actualNumber;
     /**
      * 
@@ -18,19 +18,14 @@ public class DTO {
     }
     
     public void addNumber(String num) {
-        this.actualNumber = Integer.parseInt(num);
-        this.listNumbers.add(this.actualNumber);
+        this.listNumbers.add(num);
     }
     
     public boolean isNull() {
-        if (listNumbers == null){
-            return true;
-        } else {
-            return false;
-        }
+        return listNumbers == null;
     }
     
-    public ArrayList<Integer> getListNumbers() {
+    public ArrayList<String> getListNumbers() {
         return this.listNumbers;
     }
     
