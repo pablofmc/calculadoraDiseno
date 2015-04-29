@@ -33,7 +33,12 @@ public class Caracter {
         "1. Sumar \n" +
         "2. Restar \n" + 
         "3. Multiplicar \n" +
-        "4. Dividir \n"
+        "4. Dividir \n" +
+        "5. Exponente \n" +
+        "6. Raiz Cuadrada \n" +
+        "7. Conversion a Binario \n" +
+        "8. Conversion a Octal \n" +
+        "9. Conversion a hexadeximal \n"
         );
         
         try {
@@ -59,6 +64,7 @@ public class Caracter {
                 "Por favor ingrese un numero \n"
                 );
                 input = br.readLine();
+                System.out.println("jhgkjhb");
                 this.myController.addNumber(input);
                 input = "1";
             }

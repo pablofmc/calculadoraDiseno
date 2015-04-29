@@ -17,8 +17,9 @@ public class Substracter extends Calculator {
     
     public String calculate(DTO myDTO) {
         this.listNumbers = myDTO.getListNumbers();
-        for(int i = 0;i <= listNumbers.size();i++) {
-            partialResult -= listNumbers.indexOf(i);
+        partialResult = this.listNumbers.get(0);
+        for(int i = 1;i < listNumbers.size();i++) {
+            partialResult -= this.listNumbers.get(i);
         }
         result = Integer.toString(partialResult);
         return result;
