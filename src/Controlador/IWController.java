@@ -7,6 +7,8 @@ package Controlador;
 
 import Modelo.DTO;
 import Modelo.MathematicsFactory;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,4 +21,7 @@ public interface IWController {
     void addNumber( String number);
     String calculateResult();
     String asString(DTO myDTO);
+    Color getBackgroundColor();
+    ImageIcon getImage();
+    void changeOperation();
 }

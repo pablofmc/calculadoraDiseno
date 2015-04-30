@@ -5,7 +5,9 @@
  */
 package Modelo;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,6 +18,8 @@ public class ToHexadecimal extends Calculator{
      * 
      */
     public ToHexadecimal() {
+        this.myColor = Color.RED;
+        this.image = new ImageIcon("img9.jpg");
     }
     
     @Override
@@ -27,4 +31,14 @@ public class ToHexadecimal extends Calculator{
         }
         return myDTO;
     } 
+    
+    @Override
+    public Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
+    }
 }

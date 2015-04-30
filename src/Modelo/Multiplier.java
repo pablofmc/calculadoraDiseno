@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  * 
@@ -12,6 +14,8 @@ public class Multiplier extends Calculator {
      * 
      */
     public Multiplier() {
+        this.myColor = Color.CYAN;
+        this.image = new ImageIcon("img5.jpg");
         this.partialResult = 0;
     }
     
@@ -25,6 +29,16 @@ public class Multiplier extends Calculator {
         }
         myDTO.addNumber(Integer.toString(partialResult));
         return myDTO;
+    }
+    
+    @Override
+    public Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
     }
 
 }

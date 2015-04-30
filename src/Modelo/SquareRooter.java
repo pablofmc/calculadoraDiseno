@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.awt.Color;
 import java.util.*;
+import javax.swing.ImageIcon;
 
 /**
  * 
@@ -12,6 +14,8 @@ public class SquareRooter extends Calculator {
      * 
      */
     public SquareRooter() {
+        this.myColor = Color.ORANGE;
+        this.image = new ImageIcon("img6.jpg");
         partialResult = 0;
     }
     
@@ -24,5 +28,15 @@ public class SquareRooter extends Calculator {
        }
        return myDTO;
    }
+   
+   @Override
+    public java.awt.Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
+    }
 
 }

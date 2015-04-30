@@ -5,7 +5,9 @@
  */
 package Modelo;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -18,6 +20,8 @@ public class ToOctal extends Calculator{
      * 
      */
     public ToOctal() {
+        this.myColor = Color.PINK;
+        this.image = new ImageIcon("img10.jpg");
     }
     
     @Override
@@ -29,4 +33,14 @@ public class ToOctal extends Calculator{
         }
         return myDTO;
     } 
+    
+    @Override
+    public Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
+    }
 }

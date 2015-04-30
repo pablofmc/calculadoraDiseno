@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.awt.Color;
 import java.util.*;
+import javax.swing.ImageIcon;
 
 /**
  * 
@@ -12,6 +14,8 @@ public class Divider extends Calculator {
      * 
      */
     public Divider() {
+        this.myColor = Color.DARK_GRAY;
+        this.image = new ImageIcon("img3.jpg");
         this.partialResult = 0;
     }
     
@@ -25,5 +29,15 @@ public class Divider extends Calculator {
         }
         myDTO.addNumber(Integer.toString(partialResult));
         return myDTO;
+    }
+    
+    @Override
+    public Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
     }
 }

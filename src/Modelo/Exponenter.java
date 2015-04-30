@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.awt.Color;
 import java.util.*;
+import javax.swing.ImageIcon;
 
 /**
  * 
@@ -12,6 +14,8 @@ public class Exponenter extends Calculator {
      * 
      */
     public Exponenter() {
+        this.myColor = Color.GREEN;
+        this.image = new ImageIcon("img4.jpg");
         partialResult = 0;
     }
     
@@ -26,6 +30,15 @@ public class Exponenter extends Calculator {
         }
         return myDTO;
     }
-
+    
+    @Override
+    public Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
+    }
 
 }

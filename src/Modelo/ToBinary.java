@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.awt.Color;
 import java.util.*;
+import javax.swing.ImageIcon;
 
 /**
  * 
@@ -11,7 +13,8 @@ public class ToBinary extends Calculator {
      * 
      */
     public ToBinary() {
-        
+        this.myColor = Color.YELLOW;
+        this.image = new ImageIcon("img8.jpg");
     }
     
     @Override
@@ -22,5 +25,15 @@ public class ToBinary extends Calculator {
             myDTO.addNumber(Integer.toBinaryString(Integer.parseInt(number)));
         }
         return myDTO;
-    } 
+    }
+    
+    @Override
+    public Color getBackgroundColor() {
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
+    }
 }

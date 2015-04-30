@@ -1,6 +1,8 @@
 package Modelo;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  * 
@@ -10,7 +12,9 @@ public class Adder extends Calculator {
     int partialResult;
 
     public Adder() {
-       this.partialResult = 0;
+        this.myColor = Color.BLUE;
+        this.image = new ImageIcon("C:/Users/diego/Documents/NetBeansProjects/calculadoraDiseno/src/Modelo/Images/img2.jpg");
+        this.partialResult = 0;
     }
     
     @Override
@@ -23,6 +27,18 @@ public class Adder extends Calculator {
         
         myDTO.addNumber(Integer.toString(partialResult));
         return myDTO;
+    }
+    
+    @Override
+    public Color getBackgroundColor() {
+        
+        System.out.println("hahah");
+        return this.myColor;
+    }
+    
+    @Override
+    public ImageIcon getImage() {
+        return this.image;
     }
 
 }
