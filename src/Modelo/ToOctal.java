@@ -21,7 +21,7 @@ public class ToOctal extends Calculator{
      */
     public ToOctal() {
         this.myColor = Color.PINK;
-        this.image = new ImageIcon("img10.jpg");
+        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img10.jpg");
     }
     
     @Override

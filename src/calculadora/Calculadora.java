@@ -7,6 +7,7 @@
 package calculadora;
 
 import Vista.Caracter;
+import Vista.Swing;
 import java.io.IOException;
 
 /**
@@ -21,7 +22,7 @@ public class Calculadora {
      */
     public static void main(String[] args) throws IOException {
         new Caracter();
-        //new Window().setVisible(true);
+        //new Swing().setVisible(true);
         
     }
     

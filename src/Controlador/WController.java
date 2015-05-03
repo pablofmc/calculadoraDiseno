@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.DTO;
 import Modelo.ICalculate;
 import Modelo.MathematicsFactory;
+import Modelo.LeeFichero;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
@@ -20,13 +21,15 @@ public class WController implements IWController{
     DTO myDTO;
     int operatorType;
     ICalculate operation;
+    LeeFichero file;
     
     /**
      * 
      */
     public WController() {
-        this.myFactory = new MathematicsFactory();
         this.myDTO = new DTO();
+        this.file = new LeeFichero("C:\\Users\\Pablo Mora\\Desktop\\interface.txt");
+        this.myFactory = new MathematicsFactory(file);
     }
 
     @Override
@@ -45,22 +48,43 @@ public class WController implements IWController{
     }
 
     @Override
-    public void addNumber(String number) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void addNumber(String numberOne, String numberTwo) {
+        if (numberTwo.isEmpty()) {
+            this.myDTO.addNumber(numberOne);
+        } else {
+            this.myDTO.addNumber(numberOne);
+            this.myDTO.addNumber(numberTwo);
+        }
     }
 
     @Override
     public String calculateResult() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String result = "";
+        if (this.operation == null) {
+            System.out.println("nooo");
+        } else {
+            result = asString(this.operation.calculate(this.myDTO));
+            
+        }
+        this.myDTO.getListNumbers().clear();
+        return result;
     }
 
     @Override
-    public String asString(DTO myDTO) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String asString(DTO aDTO) {
+        this.myDTO = aDTO;
+        String result="";
+        int size = this.myDTO.getListNumbers().size();
+        for (int i = 0; i < size - 1; i++) {
+            result += this.myDTO.getListNumbers().get(i) + "| ";
+        }
+        result += this.myDTO.getListNumbers().get(size - 1);
+        return result;
     }
 
     @Override
     public Color getBackgroundColor() {
+        
         return this.operation.getBackgroundColor();
     }
 
@@ -71,7 +95,14 @@ public class WController implements IWController{
 
     @Override
     public ImageIcon getImage() {
-        System.out.println(operation.toString());
+        System.out.println(this.operation.getImage().toString());
         return this.operation.getImage();
     }
+
+    @Override
+    public boolean isOperationNull() {
+        return this.operation == null;
+    }
+    
+    
 }

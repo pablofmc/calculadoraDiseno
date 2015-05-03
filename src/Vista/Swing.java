@@ -62,9 +62,19 @@ public class Swing extends javax.swing.JFrame {
 
         btnAnadir.setText("Añadir");
         btnAnadir.setEnabled(false);
+        btnAnadir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAnadirMouseClicked(evt);
+            }
+        });
 
         btnAceptar.setText("Aceptar");
         btnAceptar.setEnabled(false);
+        btnAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAceptarMouseClicked(evt);
+            }
+        });
 
         resultado.setText("Resultado:");
 
@@ -72,7 +82,7 @@ public class Swing extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\diego\\Documents\\NetBeansProjects\\calculadoraDiseno\\src\\Vista\\calculator_97804.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img1.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -142,30 +152,35 @@ public class Swing extends javax.swing.JFrame {
 
     private void selectItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_selectItemStateChanged
         int seleccionada = select.getSelectedIndex();
-        System.out.println("soy numero" + seleccionada);
-        if(seleccionada == 1 || seleccionada == 2 || seleccionada == 3 || seleccionada == 4){
-            this.numberOne.setEnabled(true);
-            this.numberTwo.setEnabled(false);
-            this.btnAnadir.setEnabled(true);
-            this.btnAceptar.setEnabled(true);
-        }
-        else if(seleccionada == 5){
+        if (seleccionada == 5){
             this.numberOne.setEnabled(true);
             this.numberTwo.setEnabled(true);
             this.btnAnadir.setEnabled(true);
             this.btnAceptar.setEnabled(true);
-        }
-        else if(seleccionada == 6 ||seleccionada == 7 || seleccionada == 8 || seleccionada == 9){
+        } else {
             this.numberOne.setEnabled(true);
+            this.numberTwo.setText(null);
             this.numberTwo.setEnabled(false);
             this.btnAnadir.setEnabled(true);
             this.btnAceptar.setEnabled(true);
         }
         this.myController.addOperatorType(Integer.toString(seleccionada));
         this.myController.changeOperation();
-        this.getContentPane().setBackground(this.myController.getBackgroundColor());
-        this.jLabel2.setIcon(this.myController.getImage());
+        if (this.myController.isOperationNull()) {
+        } else {
+            this.getContentPane().setBackground(this.myController.getBackgroundColor());
+            this.jLabel2.setIcon(this.myController.getImage());
+        }
+        
     }//GEN-LAST:event_selectItemStateChanged
+
+    private void btnAnadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMouseClicked
+        this.myController.addNumber(this.numberOne.getText(), this.numberTwo.getText());
+    }//GEN-LAST:event_btnAnadirMouseClicked
+
+    private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
+        this.jTextArea1.setText(this.myController.calculateResult());
+    }//GEN-LAST:event_btnAceptarMouseClicked
 
     /**
      * @param args the command line arguments

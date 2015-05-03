@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.DTO;
 import Modelo.ICalculate;
 import Modelo.MathematicsFactory;
+import Modelo.LeeFichero;
 
 /**
  * 
@@ -13,13 +14,15 @@ public class TController implements ITController {
     DTO myDTO;
     int operatorType;
     ICalculate operation;
+    LeeFichero file;
     
     /**
      * 
      */
     public TController() {
-        this.myFactory = new MathematicsFactory();
         this.myDTO = new DTO();
+        this.file = new LeeFichero("C:\\Users\\Pablo Mora\\Desktop\\caracter.txt");
+        this.myFactory = new MathematicsFactory(file);
     }
 
     @Override
@@ -39,8 +42,14 @@ public class TController implements ITController {
 
     @Override
     public String calculateResult() {
+        String result = "";
         this.operation = this.myFactory.createInstance(this.operatorType);
-        return asString(this.operation.calculate(this.myDTO));
+        if (this.operation == null) {
+            System.out.println("toy nulo");
+        } else {
+            result = asString(this.operation.calculate(this.myDTO));
+        }
+        return result;
     }
 
     @Override

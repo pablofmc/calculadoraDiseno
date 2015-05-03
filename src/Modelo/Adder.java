@@ -13,7 +13,7 @@ public class Adder extends Calculator {
 
     public Adder() {
         this.myColor = Color.BLUE;
-        this.image = new ImageIcon("C:/Users/diego/Documents/NetBeansProjects/calculadoraDiseno/src/Modelo/Images/img2.jpg");
+        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img3.jpg");
         this.partialResult = 0;
     }
     
@@ -31,8 +31,6 @@ public class Adder extends Calculator {
     
     @Override
     public Color getBackgroundColor() {
-        
-        System.out.println("hahah");
         return this.myColor;
     }
     

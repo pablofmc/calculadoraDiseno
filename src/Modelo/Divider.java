@@ -15,7 +15,7 @@ public class Divider extends Calculator {
      */
     public Divider() {
         this.myColor = Color.DARK_GRAY;
-        this.image = new ImageIcon("img3.jpg");
+        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img3.jpg");
         this.partialResult = 0;
     }
     

@@ -15,7 +15,7 @@ public class Exponenter extends Calculator {
      */
     public Exponenter() {
         this.myColor = Color.GREEN;
-        this.image = new ImageIcon("img4.jpg");
+        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img4.jpg");
         partialResult = 0;
     }
     

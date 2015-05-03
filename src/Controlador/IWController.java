@@ -18,10 +18,11 @@ public interface IWController {
     void setFactory(MathematicsFactory myFactory);
     MathematicsFactory getFactory();
     void addOperatorType(String operatorType);
-    void addNumber( String number);
+    void addNumber( String numberOne, String numberTwo);
     String calculateResult();
     String asString(DTO myDTO);
     Color getBackgroundColor();
     ImageIcon getImage();
     void changeOperation();
+    boolean isOperationNull();
 }
