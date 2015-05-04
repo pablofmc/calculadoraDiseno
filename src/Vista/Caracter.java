@@ -60,7 +60,7 @@ public class Caracter {
                 System.out.println(
                 "Por favor eliga una de las sgts opciones \n" +
                 "1. Agregar" +
-                "2. Aceptar"
+                "2. Aceptar" + "\n"
                 );
                 input = br.readLine();
 

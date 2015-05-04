@@ -21,7 +21,7 @@ public class TController implements ITController {
      */
     public TController() {
         this.myDTO = new DTO();
-        this.file = new LeeFichero("C:\\Users\\diego\\Desktop\\caracter.txt");
+        this.file = new LeeFichero("C:\\Users\\Pablo Mora\\Desktop\\caracter.txt");
         this.myFactory = new MathematicsFactory(file);
     }
 
@@ -50,7 +50,6 @@ public class TController implements ITController {
     @Override
     public void addOperatorType(String operatorType) {
         this.operatorType = Integer.parseInt(operatorType);
-        System.out.println("jahgsj");
     }
 
     @Override

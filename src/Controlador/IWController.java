@@ -25,4 +25,6 @@ public interface IWController {
     ImageIcon getImage();
     void changeOperation();
     boolean isOperationNull();
+    
+    
 }

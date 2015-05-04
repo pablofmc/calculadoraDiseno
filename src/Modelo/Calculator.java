@@ -35,7 +35,5 @@ public abstract class Calculator implements ICalculate {
     @Override
     public ImageIcon getImage() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
+    }  
 }

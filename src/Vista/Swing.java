@@ -8,6 +8,7 @@ package Vista;
 
 import Controlador.IWController;
 import Controlador.WController;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -151,6 +152,7 @@ public class Swing extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void selectItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_selectItemStateChanged
+        
         int seleccionada = select.getSelectedIndex();
         if (seleccionada == 5){
             this.numberOne.setEnabled(true);
@@ -167,6 +169,7 @@ public class Swing extends javax.swing.JFrame {
         this.myController.addOperatorType(Integer.toString(seleccionada));
         this.myController.changeOperation();
         if (this.myController.isOperationNull()) {
+            JOptionPane.showMessageDialog(this, "Operacion no disponible");
         } else {
             this.getContentPane().setBackground(this.myController.getBackgroundColor());
             this.jLabel2.setIcon(this.myController.getImage());

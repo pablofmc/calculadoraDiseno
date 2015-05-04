@@ -21,8 +21,8 @@ public class Calculadora {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
-        new Caracter();
-        //new Swing().setVisible(true);
+        //new Caracter();
+        new Swing().setVisible(true);
         
     }
     
