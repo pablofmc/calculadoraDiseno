@@ -14,5 +14,6 @@ public interface ITController {
     void addNumber( String number);
     String calculateResult();
     String asString(DTO myDTO);
+    boolean createInstance();
     
 }

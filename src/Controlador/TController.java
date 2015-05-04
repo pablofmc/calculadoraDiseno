@@ -21,7 +21,7 @@ public class TController implements ITController {
      */
     public TController() {
         this.myDTO = new DTO();
-        this.file = new LeeFichero("C:\\Users\\Pablo Mora\\Desktop\\caracter.txt");
+        this.file = new LeeFichero("C:\\Users\\diego\\Desktop\\caracter.txt");
         this.myFactory = new MathematicsFactory(file);
     }
 
@@ -42,19 +42,15 @@ public class TController implements ITController {
 
     @Override
     public String calculateResult() {
-        String result = "";
-        this.operation = this.myFactory.createInstance(this.operatorType);
-        if (this.operation == null) {
-            System.out.println("toy nulo");
-        } else {
-            result = asString(this.operation.calculate(this.myDTO));
-        }
+        String result;
+        result = asString(this.operation.calculate(this.myDTO));
         return result;
     }
 
     @Override
     public void addOperatorType(String operatorType) {
         this.operatorType = Integer.parseInt(operatorType);
+        System.out.println("jahgsj");
     }
 
     @Override
@@ -68,4 +64,14 @@ public class TController implements ITController {
         result += this.myDTO.getListNumbers().get(size - 1);
         return result;
     }   
+
+    @Override
+    public boolean createInstance() {
+        this.operation = this.myFactory.createInstance(this.operatorType);
+        if(this.operation == null){
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
