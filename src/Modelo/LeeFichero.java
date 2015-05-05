@@ -27,7 +27,7 @@ public class LeeFichero {
     }
     public void read(TreeMap pairs) {
         try {
-            file = new File ("C:\\Users\\Pablo Mora\\Desktop\\archivo.txt");
+            file = new File ("./src/Modelo/Archivos/archivo.txt");
             fr1 = new FileReader (valids);
             br1 = new BufferedReader(fr1);
 

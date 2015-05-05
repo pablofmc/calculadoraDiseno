@@ -28,7 +28,7 @@ public class WController implements IWController{
      */
     public WController() {
         this.myDTO = new DTO();
-        this.file = new LeeFichero("C:\\Users\\Pablo Mora\\Desktop\\interface.txt");
+        this.file = new LeeFichero("./src/Modelo/Archivos/interfaz.txt");
         this.myFactory = new MathematicsFactory(file);
     }
 
