@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.TreeMap;
  
 public class LeeFichero {
-   
     File file;
     File valids; 
     FileReader fr1;
@@ -26,7 +25,6 @@ public class LeeFichero {
         valids = new File(path);
         this.listValids = new ArrayList();
     }
-    
     public void read(TreeMap pairs) {
         try {
             file = new File ("C:\\Users\\Pablo Mora\\Desktop\\archivo.txt");

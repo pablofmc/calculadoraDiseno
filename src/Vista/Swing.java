@@ -8,6 +8,7 @@ package Vista;
 
 import Controlador.IWController;
 import Controlador.WController;
+import java.awt.event.ItemEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -152,29 +153,29 @@ public class Swing extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void selectItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_selectItemStateChanged
-        
-        int seleccionada = select.getSelectedIndex();
-        if (seleccionada == 5){
-            this.numberOne.setEnabled(true);
-            this.numberTwo.setEnabled(true);
-            this.btnAnadir.setEnabled(true);
-            this.btnAceptar.setEnabled(true);
-        } else {
-            this.numberOne.setEnabled(true);
-            this.numberTwo.setText(null);
-            this.numberTwo.setEnabled(false);
-            this.btnAnadir.setEnabled(true);
-            this.btnAceptar.setEnabled(true);
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            int seleccionada = select.getSelectedIndex();
+            if (seleccionada == 5){
+                this.numberOne.setEnabled(true);
+                this.numberTwo.setEnabled(true);
+                this.btnAnadir.setEnabled(true);
+                this.btnAceptar.setEnabled(true);
+            } else {
+                this.numberOne.setEnabled(true);
+                this.numberTwo.setText(null);
+                this.numberTwo.setEnabled(false);
+                this.btnAnadir.setEnabled(true);
+                this.btnAceptar.setEnabled(true);
+            }
+            this.myController.addOperatorType(Integer.toString(seleccionada));
+            this.myController.changeOperation();
+            if (this.myController.isOperationNull()) {
+                JOptionPane.showMessageDialog(this, "Operacion no disponible");
+            } else {
+                this.getContentPane().setBackground(this.myController.getBackgroundColor());
+                this.jLabel2.setIcon(this.myController.getImage());
+            }
         }
-        this.myController.addOperatorType(Integer.toString(seleccionada));
-        this.myController.changeOperation();
-        if (this.myController.isOperationNull()) {
-            JOptionPane.showMessageDialog(this, "Operacion no disponible");
-        } else {
-            this.getContentPane().setBackground(this.myController.getBackgroundColor());
-            this.jLabel2.setIcon(this.myController.getImage());
-        }
-        
     }//GEN-LAST:event_selectItemStateChanged
 
     private void btnAnadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMouseClicked

@@ -60,12 +60,7 @@ public class WController implements IWController{
     @Override
     public String calculateResult() {
         String result = "";
-        if (this.operation == null) {
-            System.out.println("nooo");
-        } else {
-            result = asString(this.operation.calculate(this.myDTO));
-            
-        }
+        result = asString(this.operation.calculate(this.myDTO));
         this.myDTO.getListNumbers().clear();
         return result;
     }
@@ -95,7 +90,6 @@ public class WController implements IWController{
 
     @Override
     public ImageIcon getImage() {
-        System.out.println(this.operation.getImage().toString());
         return this.operation.getImage();
     }
 

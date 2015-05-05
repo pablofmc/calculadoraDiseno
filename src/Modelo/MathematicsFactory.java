@@ -22,9 +22,7 @@ public class MathematicsFactory {
     }
     
     public Calculator createInstance(int operatorType) {
-        System.out.println(this.operatorType);
         this.operatorType = operatorType;
-        
         this.calcString = pairs.get(this.operatorType);
         if (this.calcString == null) {
             return this.operation = null;
