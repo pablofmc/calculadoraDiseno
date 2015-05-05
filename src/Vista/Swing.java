@@ -84,7 +84,7 @@ public class Swing extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\diego\\Documents\\NetBeansProjects\\calculadoraDiseno\\src\\Modelo\\Images\\Calculator.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Modelo/Images/Calculator.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

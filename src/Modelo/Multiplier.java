@@ -15,7 +15,7 @@ public class Multiplier extends Calculator {
      */
     public Multiplier() {
         this.myColor = Color.CYAN;
-        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img5.jpg");
+        this.image = new ImageIcon("src/Modelo/Images/img3.jpg");
         this.partialResult = 0;
     }
     

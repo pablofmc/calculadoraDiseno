@@ -15,7 +15,7 @@ public class SquareRooter extends Calculator {
      */
     public SquareRooter() {
         this.myColor = Color.ORANGE;
-        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img6.jpg");
+        this.image = new ImageIcon("src/Modelo/Images/img6.jpg");
         partialResult = 0;
     }
     

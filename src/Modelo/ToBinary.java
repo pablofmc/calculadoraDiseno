@@ -14,7 +14,7 @@ public class ToBinary extends Calculator {
      */
     public ToBinary() {
         this.myColor = Color.YELLOW;
-        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img8.jpg");
+        this.image = new ImageIcon("src/Modelo/Images/img7.jpg");
     }
     
     @Override

@@ -15,7 +15,7 @@ public class Substracter extends Calculator {
      */
     public Substracter() {
         this.myColor = Color.LIGHT_GRAY;
-        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img7.jpg");
+        this.image = new ImageIcon("src/Modelo/Images/img2.jpg");
         partialResult = 0;
     }
     

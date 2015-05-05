@@ -19,7 +19,7 @@ public class ToHexadecimal extends Calculator{
      */
     public ToHexadecimal() {
         this.myColor = Color.RED;
-        this.image = new ImageIcon("C:\\Users\\Pablo Mora\\Documents\\NetBeansProjects\\calculadora\\src\\Modelo\\Images\\img9.jpg");
+        this.image = new ImageIcon("src/Modelo/Images/img9.jpg");
     }
     
     @Override

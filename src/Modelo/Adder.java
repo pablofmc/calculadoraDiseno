@@ -13,7 +13,7 @@ public class Adder extends Calculator {
 
     public Adder() {
         this.myColor = Color.BLUE;
-        this.image = new ImageIcon(".src/Modelo/Images/img3.jpg");
+        this.image = new ImageIcon("src/Modelo/Images/img1.jpg");
         this.partialResult = 0;
     }
     
